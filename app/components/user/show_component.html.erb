@@ -1,13 +1,13 @@
 <div>Add User::Show template here</div>
 <div id="<%= dom_id @user %>">
   <p>
-    <strong>Email:</strong>
-    <%= link_to @user.email, user_path(@user) %>
+    <strong>Emailllllllllllll:</strong>
+    <%= @user.email%>
   </p>
 
   <p>
     <strong>Avatar:</strong>
-    <%= image_tag(@user.avatar.url) if @user.avatar %>
+    <%= image_tag(@user.avatar.url, class: "bg-red") if @user.avatar %>
   </p>
 
 </div>

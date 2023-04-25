@@ -1,9 +1,17 @@
-<h1>New user</h1>
-
-<%= render(Form::User::CreateComponent.new) %>
-
-<br>
-
-<div>
-  <%= link_to "Back to users", users_path %>
+<div class="flex justify-center gap-0">
+  <div class="flex flex-col md:flex-row min-h-screen min-w-full container items-center">
+    <div class="flex justify-center items-center md:w-3/5 h-full w-full bg-cover bg-[url('https://images.unsplash.com/photo-1579451861283-a2239070aaa9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')]">
+      <div class="flex flex-col w-1/2">
+        <div class="text-white font-bold text-4xl pb-4">
+          Reference site about Lorem Ipsum..
+        </div>
+        <div class="text-white text-sm">
+          What is Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book it has?
+        </div>
+      </div>
+    </div>
+    <div class="md:w-2/5 bg-white h-full w-full flex items-center justify-center">
+      <%= render(Form::User::CreateComponent.new(signin_path: signin_path, signup_path: signup_path)) %>
+    </div>
+  </div>
 </div>

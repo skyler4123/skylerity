@@ -1,0 +1,5 @@
+<% @users.each do |user| %>
+  <p><strong>Email:</strong></p>
+  <%= image_tag(user.avatar.url(:avatar), class: "h-9 w-9 object-cover rounded-full") %>
+  <%= link_to user.email, user_path(user) %>
+<% end %>

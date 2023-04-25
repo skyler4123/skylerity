@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   skip_before_action :authenticate_user!, only: [:new, :create]
-  before_action :set_user, only: %i[ show edit update destroy ]
+  before_action :set_user, only: %i[ show edit update destroy image]
 
   # GET /users or /users.json
   def index
@@ -42,6 +42,14 @@ class UsersController < ApplicationController
   def update
     respond_to do |format|
       if @user.update(user_params)
+        if params[:user][:avatar]
+          @user.avatar.destroy if @user.avatar
+          @user.update(avatar: Image.new(attachment: params[:user][:avatar]))
+        end
+        # if params[:user][:image]
+        #   @user.images = Image.new(params[:user][:image])
+        # end
+        # @user.avatar = Image.new(attachment: params[:user][:avatar]) if params[:user][:avatar]
         format.html { redirect_to user_url(@user), notice: "User was successfully updated." }
         format.json { render :show, status: :ok, location: @user }
       else
@@ -61,6 +69,11 @@ class UsersController < ApplicationController
     end
   end
 
+  # def image
+  #   if params[:user][:image]
+  #     @user.images = [Image.new(attachment: params[:user][:image])]
+  #   end
+  # end
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user
