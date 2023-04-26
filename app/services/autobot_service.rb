@@ -1,4 +1,4 @@
-module Autobot
+module AutobotService
   class User
     def self.create
       payload = {
@@ -16,7 +16,7 @@ module Autobot
       payload = {
         content: Faker::Games::Dota.quote,
       }
-      User.all.sample.
+      User.all.sample.posts.create(payload)
     end
   end
 end

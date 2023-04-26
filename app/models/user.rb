@@ -9,4 +9,5 @@ class User
 
   has_one :avatar, class_name: 'Image'
   has_many :images
+  has_many :posts
 end

@@ -36,7 +36,7 @@ class AttachmentUploader < CarrierWave::Uploader::Base
   end
 
   version :avatar do
-    process resize_to_fit: [128, 128]
+    process resize_to_fit: [40, 40]
   end
 
   # Add an allowlist of extensions which are allowed to be uploaded.

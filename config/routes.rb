@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :posts
   resources :images
   get 'signin', to: 'sessions#new'
   post 'signin', to: 'sessions#create'

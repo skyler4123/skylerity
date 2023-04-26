@@ -1,0 +1,2 @@
+class Autobot::User
+end

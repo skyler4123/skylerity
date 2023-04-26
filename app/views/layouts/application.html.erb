@@ -12,6 +12,7 @@
   </head>
 
   <body>
+    <%= render(Nav::User::SessionComponent.new(current_user: @current_user)) %>
     <%= yield %>
   </body>
 </html>
