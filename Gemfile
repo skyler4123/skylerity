@@ -67,4 +67,12 @@ gem 'view_component'
 gem 'tailwindcss-rails'
 gem 'sidekiq'
 gem 'sidekiq-cron'
+
+gem 'rack-cors'
+
+gem 'webdrivers'
 gem 'selenium-webdriver'
+
+gem 'eventmachine'
+gem 'faye-websocket'
+gem 'em-websocket'
