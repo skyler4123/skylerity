@@ -6,6 +6,6 @@ class Nav::User::SessionComponent < ViewComponent::Base
   end
 
   def render?
-    request.path != signin_path
+    !request.path.in?([signin_path, signup_path])
   end
 end

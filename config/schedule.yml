@@ -1,0 +1,21 @@
+# config/schedule.yml
+
+# my_first_job:
+#   cron: "*/5 * * * *"
+#   class: "HardWorker"
+#   queue: hard_worker
+
+# second_job:
+#   cron: "*/30 * * * *" # execute at every 30 minutes
+#   class: "HardWorker"
+#   queue: hard_worker_long
+#   args:
+#     hard: "stuff"
+factory_user:
+  cron: "* * * * *"
+  class: "Factory::CreateUser"
+  queue: "factory_user"
+facroty_post:
+  cron: "* * * * *"
+  class: "Factory::CreatePost"
+  queue: "factory_post"

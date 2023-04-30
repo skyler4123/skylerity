@@ -6,7 +6,7 @@ class User
 
   field :email, type: String
   field :password_digest, type: String
-
+  field :name, type: String
   has_one :avatar, class_name: 'Image'
   has_many :images
   has_many :posts

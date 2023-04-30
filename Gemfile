@@ -76,3 +76,5 @@ gem 'selenium-webdriver'
 gem 'eventmachine'
 gem 'faye-websocket'
 gem 'em-websocket'
+
+gem 'technical-analysis'
