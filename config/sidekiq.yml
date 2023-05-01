@@ -1,0 +1,5 @@
+:queues:
+  - default
+  - factory_post
+  - factory_user
+  - forex_clean

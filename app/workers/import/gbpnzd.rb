@@ -2,12 +2,11 @@ class Import::Gbpnzd
   include Sidekiq::Worker
   sidekiq_options retry: true
 
-  def perform(data)
-    # Gbpnzd.create(
-    #   ask: data['ask'],
-    #   bid: data['bid'],
-    #   quote: data['quote'],
-    #   epoch: data['epoch']
-    # )
+  def perform(event_data)
+    data = JSON.parse(event_data)['tick']
+    Gbpnzd.create(
+      epoch: data['epoch'],
+      quote: data['quote']
+    )
   end
 end

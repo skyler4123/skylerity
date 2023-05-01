@@ -19,3 +19,7 @@ facroty_post:
   cron: "* * * * *"
   class: "Factory::CreatePost"
   queue: "factory_post"
+forex_clean:
+  cron: "*/10 * * * *"
+  class: "Forex::Clean"
+  queue: "forex_clean"
