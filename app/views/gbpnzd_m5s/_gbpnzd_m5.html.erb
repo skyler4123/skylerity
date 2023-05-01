@@ -1,0 +1,57 @@
+<div id="<%= dom_id gbpnzd_m5 %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Time:</strong>
+    <%= gbpnzd_m5.time %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Open:</strong>
+    <%= gbpnzd_m5.open %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">High:</strong>
+    <%= gbpnzd_m5.high %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Low:</strong>
+    <%= gbpnzd_m5.low %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Close:</strong>
+    <%= gbpnzd_m5.close %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Change:</strong>
+    <%= gbpnzd_m5.change %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Percentage:</strong>
+    <%= gbpnzd_m5.percentage %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Bb upper:</strong>
+    <%= gbpnzd_m5.bb_upper %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Bb middle:</strong>
+    <%= gbpnzd_m5.bb_middle %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Bb lower:</strong>
+    <%= gbpnzd_m5.bb_lower %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this gbpnzd m5", gbpnzd_m5, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Edit this gbpnzd m5', edit_gbpnzd_m5_path(gbpnzd_m5), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>
