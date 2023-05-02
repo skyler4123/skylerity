@@ -13,6 +13,7 @@ namespace :stream do
       ws.on :message do |event|
         puts event.data
         Import::Gbpnzd.perform_async(event.data)
+        # Import::Gbpnzd.new.perform(event.data)
       end
     }
   end

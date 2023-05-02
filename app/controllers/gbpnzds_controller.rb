@@ -3,7 +3,7 @@ class GbpnzdsController < ApplicationController
 
   # GET /gbpnzds or /gbpnzds.json
   def index
-    @gbpnzds = Gbpnzd.all.last(100)
+    @gbpnzds = Gbpnzd.all.order_by(created_at: :desc).limit(100)
   end
 
   # GET /gbpnzds/1 or /gbpnzds/1.json

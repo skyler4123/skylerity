@@ -1,8 +1,8 @@
 class Forex::Indicator::Bb
-  def calculate
-    data = Gbpnzd.last(100).pluck(:epoch, :quote).map do |data|
+  def calculate(candles)
+    data = candles.pluck(:time, :close).map do |data|
       {
-        date_time: Time.at(data[0]),
+        date_time: data[0],
         close: data[1]
       }
     end

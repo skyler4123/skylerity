@@ -3,7 +3,7 @@ class GbpnzdM5sController < ApplicationController
 
   # GET /gbpnzd_m5s or /gbpnzd_m5s.json
   def index
-    @gbpnzd_m5s = GbpnzdM5.all
+    @gbpnzd_m5s = GbpnzdM5.all.order_by(time: :desc)
   end
 
   # GET /gbpnzd_m5s/1 or /gbpnzd_m5s/1.json
